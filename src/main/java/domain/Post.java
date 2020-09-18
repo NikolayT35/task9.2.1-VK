@@ -1,10 +1,12 @@
 package domain;
 
 public class Post {
-
+    private int postID;
+    private int pageId;
     private int date;
     private String text;
     private String imageUrl;
+    private int authorId;
     private int authorPicUrl;
     private int numberOfFollowers;
     private int numberOfViews;
@@ -15,10 +17,25 @@ public class Post {
     private boolean isFavorites;
     private boolean friendsOnly;
     private boolean isEdit;
+    private Geo geo;
     private UserInfo userInfo;
     private CommentsInfo commentsInfo;
 
+    public int getPostID() {
+        return postID;
+    }
 
+    public void setPostID(int postID) {
+        this.postID = postID;
+    }
+
+    public int getPageId() {
+        return pageId;
+    }
+
+    public void setPageId(int pageId) {
+        this.pageId = pageId;
+    }
 
     public int getDate() {
         return date;
@@ -42,6 +59,14 @@ public class Post {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public int getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     public int getAuthorPicUrl() {
@@ -122,6 +147,14 @@ public class Post {
 
     public void setEdit(boolean edit) {
         isEdit = edit;
+    }
+
+    public Geo getGeo() {
+        return geo;
+    }
+
+    public void setGeo(Geo geo) {
+        this.geo = geo;
     }
 
     public UserInfo getUserInfo() {
